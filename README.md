@@ -1,3 +1,7 @@
+# Tutorial for react native Notes APP front 40% done
+
+[LINK](https://youtu.be/bCpFbERgj7s?si=22KguVDSUKNEECT2)
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
