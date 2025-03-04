@@ -32,7 +32,7 @@ const NoteScreen = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       setLoading(true);
-      const response = await noteService.getNotes();
+      const response = await noteService.getNotes(user.$id);
 
       if (response.error) {
         setError(response.error);
@@ -50,7 +50,7 @@ const NoteScreen = () => {
   const addNote = async () => {
     if (newNote.trim() === '') return;
 
-    const response = await noteService.addNote(newNote);
+    const response = await noteService.addNote(user.$id, newNote);
     if (response.error) {
       Alert.alert('Error', response.error);
     } else {
@@ -61,7 +61,6 @@ const NoteScreen = () => {
   };
 
   const deleteNote = (id) => {
-    console.log('thiss', id);
     Alert.alert('Delete Note', 'Are you sure you want to delete this note?', [
       {
         text: 'Cancel',
@@ -107,7 +106,11 @@ const NoteScreen = () => {
       ) : (
         <>
           {error && <Text style={styles.errorText}>{error}</Text>}
-          <NoteList notes={notes} onDelete={deleteNote} onEdit={editNote} />
+          {notes.length === 0 ? (
+            <Text style={styles.noNotesText}>You have not notes</Text>
+          ) : (
+            <NoteList notes={notes} onDelete={deleteNote} onEdit={editNote} />
+          )}
         </>
       )}
 
@@ -156,6 +159,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
     fontSize: 16,
+  },
+  noNotesText: {
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#555',
+    marginTop: 15,
   },
 });
 
