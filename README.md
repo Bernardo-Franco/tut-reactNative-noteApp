@@ -2,7 +2,13 @@
 
 [LINK](https://youtu.be/bCpFbERgj7s?si=22KguVDSUKNEECT2)
 
+Thanks to Traversy Media for sharing all this content
+
 the backend (CRUD + Auth) in this app was elaborated with (Appwrite)[https://appwrite.io/]
+
+Note: be carefull with the react-native Alert function, read the
+documentation to see the compatibility with other devices diferent
+to android
 
 ---
 
