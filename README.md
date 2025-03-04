@@ -1,6 +1,12 @@
-# Tutorial for react native Notes APP front 40% done
+# Tutorial for react native Notes APP with Expo
 
 [LINK](https://youtu.be/bCpFbERgj7s?si=22KguVDSUKNEECT2)
+
+the backend (CRUD + Auth) in this app was elaborated with (Appwrite)[https://appwrite.io/]
+
+---
+
+// Expo info auto added to the README when installed
 
 # Welcome to your Expo app 👋
 
